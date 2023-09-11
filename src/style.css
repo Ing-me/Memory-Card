@@ -39,6 +39,7 @@
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 .container > button:hover{
     background-image: linear-gradient(to bottom right, #305170, #6DFC6B);
@@ -59,4 +60,21 @@
     border-radius: 5px;
     border:none;
     background-color: var(--text-clr);
+}
+
+.card-grid{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    border: 1px solid red;
+}
+.card{
+    position: relative;
+    border: 2px solid green;
+}
+.card > div > img{
+    width: 100%;
+    height: 18rem;
 }

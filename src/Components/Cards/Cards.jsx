@@ -1,7 +1,12 @@
-const Cards = () => {
+const SingleCards = ({ card }) => {
     return(
-        <h2>I am the cards</h2>
+        <div className="card" >
+             <div>
+                <img className="front" src={card.image} alt="Card front" />
+                <img className="back" src="haitilogo1.jpg" alt="Back card" />
+             </div>
+        </div>
     )
 }
 
-export default Cards;
+export default SingleCards;
