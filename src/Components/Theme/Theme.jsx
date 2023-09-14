@@ -28,7 +28,7 @@ const Theme = () => {
         fetch("https://dog.ceo/api/breeds/image/random/6")
         .then(result => result.json())
         .then(data => data.message.map((data) => cardContainer.push(createDogObject(data))))
-    },[])
+    },[cardContainer])
 
     //Shuffle the cards randomly
     const shuffleCard = () =>{
@@ -39,6 +39,8 @@ const Theme = () => {
 
         setChoiceTwo(null)
         setChoineOne(null)
+        setScore(0)
+        setMaxScore(0)
         setCards(shuffleCards)
         setTurns(0)
     }
@@ -83,7 +85,7 @@ const Theme = () => {
     }, [choiceOne, choiceTwo])
 
       
-console.log(score)
+    useEffect(() => {shuffleCard()},[])
     // Reset turn
     const resetTurn = () => {
         setChoiceTwo(null)
