@@ -29,8 +29,13 @@
     place-items: center;
 }
 .container > h2{
-    margin: 20px 0px;
-    color: var(--whiteMode);
+    background-image: linear-gradient(to bottom right, #305170, #6DFC6B);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color: var(--darkMode);
+    padding: 15px;
+    margin-top: 10px;
 }
 .container > button{
     padding: 15px;
