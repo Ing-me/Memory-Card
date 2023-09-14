@@ -68,13 +68,75 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
-    border: 1px solid red;
 }
 .card{
     position: relative;
-    border: 2px solid green;
+    border-radius: 15px;
 }
 .card > div > img{
     width: 100%;
     height: 18rem;
+    border-radius: 15px;
+}
+.card .front{
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: absolute;
+}
+.flipped .front{
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+.card .back{
+    transition: all ease-in 0.2;
+    transition-delay: 0.2;
+}
+
+.flipped .back{
+    transform:  rotateY(90deg);
+    transition-delay: 0s;
+}
+
+.displayScore{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+.displayScore .score{
+    margin: 20px;
+    background-image: linear-gradient(to bottom right, #305170, #6DFC6B);
+    color: var(--darkMode);
+    padding: 15px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        margin: 5px;
+    }
+    .container > h2{
+        background-image: linear-gradient(to bottom right, #305170, #6DFC6B);
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        color: var(--darkMode);
+        padding: 15px;
+        margin-top: 10px;
+    }
+    .displayScore{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-grid{
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 10px;
+    }
 }
